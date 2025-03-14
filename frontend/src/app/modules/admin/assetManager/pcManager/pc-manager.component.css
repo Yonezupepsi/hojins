@@ -1,0 +1,88 @@
+.pc-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+.pc-card {
+    width: 90%;
+    height: 160px;
+    margin-left: 5%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    border: solid 4px #4388cb;
+    position: relative;
+}
+
+.pc-name {
+    border-radius: 5px;
+    background-color: #daa8c4;
+    width: 60%;
+    padding: 2px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.pc-icon {
+    background-image: url('../../../../../assets/icons/desktop.png');
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.pc-under-line {
+    width: 95%;
+    height: 1px;
+    border-color: black;
+    margin: 5px auto;
+    margin-bottom: 10px;
+}
+
+.pc-add-employee {
+    background-image: url('../../../../../assets/icons/plus.png');
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+
+}
+
+.pc-bold-text {
+    font-weight: bold;
+}
+
+.pc-avatar {
+    background-image: url('../../../../../assets/images/avatars/male-14.jpg');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.pc-status {
+    background-image: url('../../../../../assets/icons/red-cross.png');
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
