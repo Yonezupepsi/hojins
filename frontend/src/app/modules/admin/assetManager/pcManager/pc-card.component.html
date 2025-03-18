@@ -1,22 +1,22 @@
 <div class="pc-card">
     <div>
-        <div class="pc-name"><span class="pc-icon"></span>{{ pc.number }}</div>
+        <div class="pc-name"><span class="pc-icon"></span>{{ pc.pcNumber }}</div>
         <span [ngClass]="pc.status === '故障' ? 'pc-status' : ''"></span>
     </div>
     <div class="pc-detail">
-        <p>CPU: {{ pc.cpu }}</p>
-        <p>Memory: {{ pc.memory }}GB</p>
+        <p>CPU: {{ pc.spec.cpu.manufacturer }}</p>
+        <p>Memory: {{ pc.spec.ram.size }}</p>
         <hr class="pc-under-line" />
     </div>
     <div class="pc-button">
-        <button (click)="pc.usage ? onViewDetails() : onAddEmployee()">
-            <p *ngIf="pc.usage">
+        <button (click)="pc.status ? onViewDetails() : onAddEmployee()">
+            <p *ngIf="pc.status">
                 <span class="pc-avatar"></span>
                 <span class="pc-bold-text">使用中</span>
                 (<span class="pc-bold-text">貸出期間</span>
-                {{ pc.usage }}~)
+                {{ pc.dateOfPurchase }}~)
             </p>
-            <p class="pc-add-employee" *ngIf="!pc.usage"></p>
+            <p class="pc-add-employee" *ngIf="!pc.status"></p>
         </button>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Pc } from 'app/mock-api/apps/pc-manager/pc.model';
 
 @Component({
     selector: 'pc-card',
@@ -9,12 +10,12 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
 })
 export class PcCardComponent {
-    @Input() pc: any;
-    @Output() viewDetails = new EventEmitter<{ id: string, status: string }>();
+    @Input() pc: Pc;
+    @Output() viewDetails = new EventEmitter<{ pcNumber: string, status: string }>();
     @Output() addEmployee = new EventEmitter<String>();
 
     onViewDetails() {
-        this.viewDetails.emit({ id: this.pc.id, status: this.pc.status });
+        this.viewDetails.emit({ pcNumber: this.pc.pcNumber, status: this.pc.status });
     }
 
     onAddEmployee() {
