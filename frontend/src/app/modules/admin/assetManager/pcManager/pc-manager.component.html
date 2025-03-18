@@ -1,4 +1,5 @@
 <div class="pc-list">
-  <pc-card *ngFor="let pc of pcs" [pc]="pc" (viewDetails)="showDetails($event)"
-    (addEmployee)="addEmployee($event)"></pc-card>
+  <pc-card *ngFor="let pc of pcs" [pc]="pc" [rentalHist]="rentalHist" [breakHist]="breakHist"
+    (viewDetails)="showDetails($event)" (addEmployee)="addEmployee($event)" (viewRentalHist)="showRentalHist($event)"
+    (viewBreakHist)="showBreakHist($event)"></pc-card>
 </div>
