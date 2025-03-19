@@ -1,3 +1,9 @@
+<div class="pc-manager-header">
+  <header class="header">
+    <h1>PC Manager</h1>
+    <h2>PC Lists</h2>
+  </header>
+
 <div class="pc-list">
   <pc-card *ngFor="let pc of pcs" [pc]="pc" [rentalHist]="rentalHist" [breakHist]="breakHist"
     (viewDetails)="showDetails($event)" (addEmployee)="addEmployee($event)" (viewRentalHist)="showRentalHist($event)"

@@ -1,3 +1,30 @@
+.pc-manager-header {
+    width: 100%;
+    margin-top: 0;
+  }
+  .header {
+    background-color: #f1f5f9;
+    color: black;
+    padding: 20px 0;
+    font-family: 'Inter var';
+    font-display: swap;
+    font-style: normal;
+  }
+
+  .header h1 {
+    font-size: 38px;
+    padding-left: 20px;
+    font-weight: 850;
+    letter-spacing: -1px;
+    
+  }
+  .header h2 {
+    font-size: 15px;
+    padding-left: 23px;
+    padding-top: 10px;
+    color: rgba(100, 97, 97, 0.907);
+  }
+
 @media (min-width: 1024px) {
     .pc-list {
         display: grid;
@@ -54,8 +81,6 @@
 .pc-card:hover {
     background-color: #f0f0f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-    transition: all 0.3s ease-in-out;
 }
 
 .pc-name {
@@ -80,12 +105,12 @@
 }
 
 .pc-under-line {
-    width: 95%;
+    width: 100%;
     height: 1px;
-    border-color: black;
+    border-color: #dbdbdb;
     margin: 5px auto;
     margin-bottom: 10px;
-}
+} 
 
 .pc-add-employee {
     background-image: url('../../../../../assets/icons/plus.png');
