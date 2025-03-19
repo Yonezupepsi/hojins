@@ -14,6 +14,7 @@ export class PcCardComponent {
     @Input() pc: Pc;
     @Input() rentalHist: PcRentalHistory[] = [];
     @Input() breakHist: PcBreakHistory[] = [];
+    @Input() filteredBreakHist: PcBreakHistory;
     @Output() viewDetails = new EventEmitter<{ pcNumber: string, status: string, rentalStatus: string }>();
     @Output() addEmployee = new EventEmitter<{ status: string, rentalStatus: string }>();
     @Output() viewRentalHist = new EventEmitter<{ pcNumber: string }>();

@@ -1,7 +1,7 @@
 <div class="pc-card">
     <div>
         <div class="pc-name"><span class="pc-icon"></span>{{ pc.pcNumber }}</div>
-        <span [ngClass]="pc.status === '故障' ? 'pc-status' : ''"></span>
+        <span [ngClass]="(pc.status === '故障' || pc.status === '修理中') ? 'pc-status' : ''"></span>
     </div>
     <div class="pc-detail">
         <p>CPU: {{ pc.spec.cpu.manufacturer }} {{ pc.spec.cpu.model }}</p>
@@ -15,6 +15,15 @@
                 <span class="pc-bold-text">使用中</span>
                 (<span class="pc-bold-text">貸出期間</span>
                 {{ pc.dateOfPurchase }}~)
+            </p>
+            <p *ngIf="pc.rentalStatus === '不可' && (pc.status === '故障' || pc.status === '修理中')">
+                <span class="pc-bold-text">
+                    {{ filteredBreakHist.issue }}
+                </span>
+                (<span class="pc-bold-text">
+                    {{ filteredBreakHist.note }}
+                </span>{{ filteredBreakHist.repairStartDate }}~)
+
             </p>
             <p class="pc-add-employee" *ngIf="pc.rentalStatus === '可能' && pc.status === '正常'"></p>
         </button>

@@ -219,7 +219,7 @@ export const pcRentalHistorys: PcRentalHistory[] = [
 
 export const pcBreakHistorys: PcBreakHistory[] = [
     {
-        pcNumber: "tomato001",
+        pcNumber: "tomato005",
         issue: "ディスプレイ問題",
         description: "画面の色がおかしい",
         repairStartDate: "2024/05/04",

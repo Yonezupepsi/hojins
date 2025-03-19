@@ -19,6 +19,7 @@ export class PcManagerComponent {
     pcs: Pc[] = [];
     rentalHist: PcRentalHistory[] = [];
     breakHist: PcBreakHistory[] = [];
+    filteredBreakHist: PcBreakHistory;
 
     constructor(private pcMockApi: PcMockApi) { }
 
@@ -47,6 +48,12 @@ export class PcManagerComponent {
         const breakHistory = this.breakHist.filter((hist) => hist.pcNumber === data.pcNumber);
         console.log('故障履歴: ', breakHistory);
 
+    }
+
+    getFilteredBreakHist(pcNumber: string) {
+        const filtered = this.breakHist.find((hist) => hist.pcNumber === pcNumber && hist.repairEndDate === null);
+        console.log(filtered);
+        return filtered;
     }
 
 }
